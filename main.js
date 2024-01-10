@@ -33,6 +33,11 @@ function compressFile() {
       compressedImage.setAttribute("width", "300px");
       compressedPreviewContainer.appendChild(compressedImage);
 
+      const downloadLink = document.createElement("a");
+      downloadLink.href = compressedDataURL;
+      downloadLink.download = "compressed_" + originalImage.alt;
+      downloadLink.textContent = "Download compressed image";
+      compressedPreviewContainer.appendChild(downloadLink);
       const compressedFile = new File(
         [blob],
         "compressed_" + originalImage.alt,
@@ -60,6 +65,12 @@ inputFile.addEventListener("change", function (e) {
     image.alt = file.name;
     originalPreviewContainer.appendChild(image);
     console.log(file.size / 1024);
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = image.src;
+    downloadLink.download = file.name;
+    downloadLink.textContent = "Download original image";
+    originalPreviewContainer.appendChild(downloadLink);
   }
 });
 

@@ -4,18 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compressor</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="main.js"></script>
+    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <script defer src="js/main.js"></script>
   </head>
   <body>
-    <h1>Compressor</h1>
+    <header>
+      <div>
+        <h1>Compressor</h1>
+      </div>
+    </header>
     <main>
-      <input type="file" id="inputFile" />
-      <button type="submit" id="compressBtn">compress now</button>
+      <section id="home">
+        <div>
+          <h2>Welcome to compressor</h2>
+        </div>
+        <p>Compress your images securely and precisely</p>
+      </section>
 
-      <div class="original-preview-container" style="margin: auto"></div>
+      <section id="supported-formats">
+        <h2>Supported formats</h2>
+        <div id="formats-wrapper">
+          <span class="format">JPG/JPEG</span>
+          <span class="format">PNG</span>
+          <span class="format">SVG</span>
+        </div>
+      </section>
 
-      <div class="compressed-preview-container"></div>
+      <section id="compress-wrapper">
+        <h2>Compress Image</h2>
+        <div>
+          <input type="file" id="inputFile" />
+          <button type="submit" id="compressBtn">compress now</button>
+
+          <div class="original-preview-container" style="margin: auto"></div>
+
+          <div class="compressed-preview-container"></div>
+        </div>
+      </section>
+
+      <section id="contribute">
+          <span><a
+            href="https://www.github.com/santhoshmani1/compressoe"
+            target="_blank"
+            rel="noreferrer"
+            >Contribute on Github</a
+          ></span>
+      </section>
     </main>
   </body>
 </html>
